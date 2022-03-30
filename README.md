@@ -16,6 +16,6 @@ The presentation also includes mush of code, and instructions how to run each te
 # Requirements
 Go 1.14
 
-
-
+# Meetup video link:
+Comming soon :)
 
