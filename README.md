@@ -1,10 +1,11 @@
 # Go nats step by step
 This repository contains golang source code for all the samples for nats implementation as presented on [Go Israel Meetup at JFrog TLV](https://www.meetup.com/Go-Israel/events/284585914/)
-[samples](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples) folder:
-- [pub-sub](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/pub-sub) - Step by step implemntatiom for NATS (https://nats.io/) pub/sub using golang
-- [chat](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/chat) - Mini console based chat using NATS pub/sub
-- [req-resp](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/req-resp) - Step by step implemntatiom for NATS requset/reply in go
-- [smash](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/smash) - Implementation of a mini service mash NATS requset/reply pattern.
+
+- [samples](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples) folder (follow the [presentation](https://docs.google.com/presentation/d/1DBwhDyXLQ-lUEekAshG9H8bWd6YtZWvkYhkdgN5gSDY) for instructions how to run each step) :
+  - [pub-sub](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/pub-sub) - Step by step implemntatiom for NATS (https://nats.io/) pub/sub using golang
+  - [chat](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/chat) - Mini console based chat using NATS pub/sub
+  - [req-resp](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/req-resp) - Step by step implemntatiom for NATS requset/reply in go
+  - [smash](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/smash) - Implementation of a mini service mash NATS requset/reply pattern.
 
 - [raffle](https://github.com/guybrand/go-nats-step-by-step/tree/main/raffle) - A small raffle console tool that was used in the meetup
 
