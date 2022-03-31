@@ -5,7 +5,7 @@ This repository contains golang source code for all the samples for nats impleme
   - [pub-sub](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/pub-sub) - Step by step implemntatiom for NATS (https://nats.io/) pub/sub using golang
   - [chat](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/chat) - Mini console based chat using NATS pub/sub
   - [req-resp](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/req-resp) - Step by step implemntatiom for NATS requset/reply in go
-  - [smesh](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/smesh) - Implementation of a mini service mash NATS requset/reply pattern.
+  - [smesh](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/smesh) - Implementation of a mini service mesh NATS requset/reply pattern.
 
 - [raffle](https://github.com/guybrand/go-nats-step-by-step/tree/main/raffle) - A small raffle console tool that was used in the meetup
 
