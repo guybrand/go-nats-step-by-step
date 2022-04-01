@@ -39,7 +39,13 @@ This repository contains golang source code for all the samples for nats impleme
 The presentation also includes much of code built step by step, and instructions how to run each step(s).
 
 # Requirements
-Go 1.14
+Go 1.14 or later version
+
+NATS server running on your local machine, easiest way to run it:
+```
+$ docker pull nats
+$ docker run --name nats --network nats --rm -p 4222:4222 -p 8222:8222 nats --http_port 8222
+```
 
 # Meetup video link:
 Comming soon :)
