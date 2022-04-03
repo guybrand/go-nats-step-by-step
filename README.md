@@ -11,34 +11,14 @@ This repository contains golang source code for all the samples for nats impleme
 
 - [benchmark-grpc-protobuf-vs-http-json](https://github.com/guybrand/go-nats-step-by-step/tree/main/benchmark-grpc-protobuf-vs-http-json) - Benchmark comparison tool between 
   - http/grpc (https://github.com/plutov/benchmark-grpc-protobuf-vs-http-json clone tweaked to allow concurrent http/grpc clients) 
-    running go run . -n 50000 -h 10 -g 20
-  - this can be compared to [req-resp](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/req-resp) pattern
-    running 
-    
-    `$ go run step4/many-reply.go`
-
-    and 
-       
-    `$ go run step5/many-async-req.go  -n 50000`
-
-
-       In 2 seperate terminal windows
-       
-  - or, if you wish to limit nats concurrency (to 20 concurrent clients):
-
-    `$ go run step4/many-reply.go`
-
-       and
-       
-       `$ go run step6/many-clients-req.go  -n 50000 -c 20`
+    and a request-reply pattern as coded in [req-resp](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples/req-resp)
     
 
-
-# Presntation link:
+### Presntation link:
 [Go NATS](https://docs.google.com/presentation/d/1DBwhDyXLQ-lUEekAshG9H8bWd6YtZWvkYhkdgN5gSDY) - 
 The presentation also includes much of code built step by step, and instructions how to run each step(s).
 
-# Requirements
+### Requirements
 Go 1.14 or later version
 
 NATS server running on your local machine, easiest way to run it:
@@ -47,5 +27,5 @@ $ docker pull nats
 $ docker run --name nats --network nats --rm -p 4222:4222 -p 8222:8222 nats --http_port 8222
 ```
 
-# Meetup video link:
+### Meetup video link:
 Comming soon :)
