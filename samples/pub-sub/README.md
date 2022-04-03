@@ -10,7 +10,7 @@ $ docker run --name nats --network nats --rm -p 4222:4222 -p 8222:8222 nats --ht
 ```
 
 # Step1:
-Open a terminal windows
+Open a terminal window
 
 `$ cd samples/pub-sub`
 
@@ -19,7 +19,7 @@ Open a terminal windows
 You may open run many subscribers on multiple terminal windows to see they will all receive same messages
 
 # Step2:
-Open another terminal windows
+Open another terminal window
 
 `$ cd samples/pub-sub`
 
