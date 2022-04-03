@@ -6,50 +6,36 @@ This repository contains 2 equal APIs: gRPC using Protobuf and JSON over HTTP. T
 
  - Go 1.11
 
-### Run tests
 
-Run benchmarks:
-```
-GO111MODULE=on go test -bench=. -benchmem
-```
+### Running 
+`go run . -n 50000 -h 10 -g 20`
 
-### Results
+-n: number of calls
+-h: number of concurrent http clients
+-g: number og concurrent gRPC clients
 
-```
-goos: darwin
-goarch: amd64
-BenchmarkGRPCProtobuf-8            10000            117649 ns/op            7686 B/op        154 allocs/op
-BenchmarkHTTPJSON-8                10000            105837 ns/op            8932 B/op        116 allocs/op
-PASS
-ok      github.com/plutov/benchmark-grpc-protobuf-vs-http-json  4.340s
-```
+Comments:
+- high number of http clients (> ~10-20) is inefficient and at some oint will hung up your CPU 
+- high number of gRPC client can improve preformance up to a degree (> ~150-300 will actually lower your preformance)
 
-They are almost the same, HTTP+JSON is a bit faster and has less allocs/op.
+- these benchmarks can be compared to [req-resp](/samples/req-resp) pattern
+    running 
+    
+    `$ go run step4/many-reply.go`
 
-### CPU usage comparison
+    and 
+       
+    `$ go run step5/many-async-req.go  -n 50000`
 
-This will create an executable `benchmark-grpc-protobuf-vs-http-json.test` and the profile information will be stored in `grpcprotobuf.cpu` and `httpjson.cpu`:
+     In 2 seperate terminal windows
+       
+   or, if you wish to limit nats concurrency (to 20 concurrent clients):
 
-```
-GO111MODULE=on go test -bench=BenchmarkGRPCProtobuf -cpuprofile=grpcprotobuf.cpu
-GO111MODULE=on go test -bench=BenchmarkHTTPJSON -cpuprofile=httpjson.cpu
-```
+    `$ go run step4/many-reply.go`
 
-Check CPU usage per approach using:
-
-```
-go tool pprof grpcprotobuf.cpu
-go tool pprof httpjson.cpu
-```
-
-My results show that Protobuf consumes less ressources, around **30% less**.
-
-### gRPC definition
-
- - Install [Go](https://golang.org/dl/)
- - Install [Protocol Buffers](https://github.com/google/protobuf/releases)
- - Install protoc plugin: `go get github.com/golang/protobuf/proto github.com/golang/protobuf/protoc-gen-go`
-
-```
-protoc --go_out=plugins=grpc:. grpc-protobuf/proto/api.proto
-```
+     and
+       
+    `$ go run step6/many-clients-req.go  -n 50000 -c 20`
+    
+    In 2 seperate terminal windows as well
+    
