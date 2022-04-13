@@ -1,4 +1,4 @@
-# Step by step NATS inplementation in golang
+# Step by step NATS implementation in golang
 This repository contains golang source code for all the samples for nats implementation as presented on [Go Israel Meetup at JFrog TLV](https://www.meetup.com/Go-Israel/events/284585914/)
 
 - [samples](https://github.com/guybrand/go-nats-step-by-step/tree/main/samples) folder (follow the [presentation](https://docs.google.com/presentation/d/1DBwhDyXLQ-lUEekAshG9H8bWd6YtZWvkYhkdgN5gSDY) for instructions how to run each step) :
@@ -28,4 +28,4 @@ $ docker run --name nats --network nats --rm -p 4222:4222 -p 8222:8222 nats --ht
 ```
 
 ### Meetup video link:
-Comming soon :)
+https://youtu.be/uUeD7hGrio8
